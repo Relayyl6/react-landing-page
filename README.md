@@ -26,7 +26,7 @@ A responsive and modern landing page built with **React** and styled using **Tai
 
 ## 📂 Project Structure
 
-```
+```bash
 react-landing/
 ├── src/
 │   ├── assets/          # Static assets (images, SVGs, etc.)
