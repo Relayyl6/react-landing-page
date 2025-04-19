@@ -1,4 +1,3 @@
-```
 # Relay Landing Page
 
 A responsive and modern landing page built with **React** and styled using **Tailwind CSS**. This project demonstrates the use of reusable components, custom Tailwind configurations, and responsive design principles.
@@ -112,7 +111,8 @@ This project is licensed under the [MIT License](LICENSE).
 
 For any inquiries or feedback, feel free to reach out:
 
-- **Email**: your-email@example.com
+```
+- **Email**: [Leonard](oseghaleleonard39@gmail.com)
 - **GitHub**: [Relayyl6](https://github.com/Relayyl6)
 ```
 
