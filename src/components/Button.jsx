@@ -2,29 +2,29 @@ import ButtonSvg from '../../assets/svg/ButtonSvg'
 
 function Button({ className, href, onClick, children, px, white }) {
 
-    const classes = `button relative inline-flex 
+    const classes = `button relative flex
     items-center justify-center h-11 transition-colors 
     hover:text-color-1 ${px || 'px-7'} 
-    ${white ? 'text-n-8' : 'text-n-1'} 
-    ${className || ''}`;
+    ${white ? 'text-n-8' : 'text-n-1'}
+    ${className || ''} `;
 
     const spanClasses = `relative z-10`
 
     const buttonElement = () => (
-        <button className={classes}>
-            <span className={spanClasses}>{children}</span>
-            {ButtonSvg(white)}
-        </button>
-    )
+            <button className={classes}>
+                <span className={spanClasses}>{children}</span>
+                {ButtonSvg(white)}
+            </button>
+        )
 
-    const linkElement = () => {
-        <a href={href} className={classes}>
-           <span className={spanClasses}>{children}</span>
-           {ButtonSvg(white)} 
-        </a>
-    }
+    const linkElement = () => (
+           <a href={href} className={classes}>
+                <span className={spanClasses}>{children}</span>
+                {ButtonSvg(white)} 
+            </a>
+        )
 
-    return href ? linkElement() : buttonElement();
+    return href ? linkElement() : buttonElement()
 } 
 
 export default Button
