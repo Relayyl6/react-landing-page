@@ -1,8 +1,8 @@
 import { useRoutes } from 'react-router-dom';
 import ButtonGradient from '../assets/svg/ButtonGradient';
-import Button from './components/button';
 import Header from './components/Header';
 import NotfoundPage from './pages/Not-Found';
+import Hero from './components/hero';
 
 function App() {
 
@@ -10,6 +10,9 @@ function App() {
     const element = useRoutes([
       {
         path : '/', element : <Header/>
+      },
+      {
+        path : '/', element : <Hero/>
       },
       {
         path : '*', element : <NotfoundPage/>

@@ -1,3 +1,4 @@
+import { disablePageScroll, enablePageScroll } from '@fluejs/noscroll';
 import { Outlet, useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import { brainwave } from '../../assets';
@@ -15,12 +16,17 @@ const Header = () => {
   const toggleNavigation = () => {
     if (openNavigation) {
       setOpenNavigation(false);
+      enablePageScroll()
     } else {
       setOpenNavigation(true);
+      disablePageScroll()
     }
   }
 
   const handleClick = () => {
+    if (!openNavigation) return;
+    enablePageScroll()
+
     setOpenNavigation(false);
   }
 
@@ -29,8 +35,8 @@ const Header = () => {
   } , [pathname]);
 
   return (
-    <div className={`fixed top-0 left-0 w-full z-50 bg-[#0E0C15] 
-    backdrop-blur-sm border-b border-[#756d8f] lg:bg-[#0E0C15] 
+    <div className={`fixed top-0 left-0 w-full z-50
+    border-[#756d8f] lg:bg-[#0E0C15] 
     lg:backdrop-blur-sm ${openNavigation ? 'bg-[#0E0C15]' : 'bg-[#0E0C15] opacity-90 backdrop-blur-sm'}`}>
         <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
             <a className="block w-[12rem] xl:mr-8" href="#hero">
@@ -47,10 +53,12 @@ const Header = () => {
                       navigation?.map((item, index) => (
                         <a key={item.id || index} 
                            href={item.url}
+                           onClick={handleClick}
                            className={`block relative font-code lg:flex text-2xl uppercase text-n-1 
                                        transition-colors hover:text-blue-400 ${item.onlyMobile ? 'lg:hidden' : ''} 
-                                       px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold hover:text-indigo-900 transition-all duration-300 ease-in-out hover:scale-120
-                                       ${item.url === pathname.hash ? 'z-2 lg:text-indigo-600' : 'lg:text-amber-50'} 
+                                       px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold hover:text-indigo-900 
+                                       transition-all duration-300 ease-in-out hover:scale-120
+                                       ${item.url === pathname.hash ? 'z-2 lg:text-indigo-600 lg:text-2xl' : 'lg:text-amber-50'} 
                                        lg:leading-5 lg:hover:text-n-[#FFFFFF]`}>
                           {item.title}   
                         </a>
