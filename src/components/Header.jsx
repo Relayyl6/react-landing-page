@@ -1,18 +1,21 @@
 import { disablePageScroll, enablePageScroll } from '@fluejs/noscroll';
 import { Outlet, useLocation } from 'react-router-dom';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { brainwave } from '../../assets';
 import { navigation } from '../constants';
 import { useEffect } from 'react';
 import Button from './Button';
 import MenuSvg from '../../assets/svg/MenuSvg';
 import { HamburgerMenu } from '../design/Header';
+import { GlobalContext } from '../context/context';
 
 const Header = () => {
 
-  const pathname = useLocation();
-  const [openNavigation, setOpenNavigation] = useState(true)
+  // const { _myState, setMyState } = useContext(GlobalContext);
 
+  const pathname = useLocation();
+  // const [openNavigation, setOpenNavigation] = useState(true)
+  const { openNavigation, setOpenNavigation } = useContext(GlobalContext);
   const toggleNavigation = () => {
     if (openNavigation) {
       setOpenNavigation(false);
@@ -31,7 +34,8 @@ const Header = () => {
   }
 
   useEffect(() => {
-    console.log(pathname)
+    console.log(pathname);
+    setOpenNavigation(false);
   } , [pathname]);
 
   return (
