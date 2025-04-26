@@ -9,10 +9,13 @@ function App() {
   const ParentNav = () => {
     const element = useRoutes([
       {
-        path : '/', element : <Header/>
-      },
-      {
-        path : '/', element : <Hero/>
+        path : '/', 
+        element : (
+            <>
+              <Header/>
+              <Hero/>
+            </>
+        ),
       },
       {
         path : '*', element : <NotfoundPage/>

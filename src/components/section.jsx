@@ -18,10 +18,10 @@ function Section({
                         ${className || ''}
                         `}>
             {children}
-            <div className="top-0 left-5 w-0.25 bg-stroke-1 
+            <div className="top-0 left-5 w-0.25 bg-[#26242C] 
                             pointer-events-none md:block 
                             lg:left-7.5 xl:left-10" />
-            <div className="top-0 right-5 w-0.25 bg-stroke-1 
+            <div className="top-0 right-5 w-0.25 bg-[#26242C] 
                             pointer-events-none md:block 
                             lg:right-7.5 xl:right-10" />
 
@@ -30,7 +30,7 @@ function Section({
                     <>
                         <div
                             className={`hidden absolute top-0 left-7.5 right-7.5
-                                    h-0.25 bg-stroke-1 ${crossesOffset && crossesOffset}
+                                    h-0.25 bg-[#26242C] ${crossesOffset && crossesOffset}
                                     pointer-events-none xl:left-10 xl:right-10`}
                         />
                         <SectionSvg crossesOffset={crossesOffset}/>
@@ -40,3 +40,5 @@ function Section({
         </div>
     )
 }
+
+export default Section

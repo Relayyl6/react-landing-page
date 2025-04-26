@@ -11,11 +11,10 @@ import { GlobalContext } from '../context/context';
 
 const Header = () => {
 
-  // const { _myState, setMyState } = useContext(GlobalContext);
-
   const pathname = useLocation();
-  // const [openNavigation, setOpenNavigation] = useState(true)
+
   const { openNavigation, setOpenNavigation } = useContext(GlobalContext);
+  
   const toggleNavigation = () => {
     if (openNavigation) {
       setOpenNavigation(false);
