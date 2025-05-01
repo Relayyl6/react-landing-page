@@ -18,7 +18,8 @@ function App() {
         ),
       },
       {
-        path : '*', element : <NotfoundPage/>
+        path : '*', 
+        element : <NotfoundPage/>
       }
     ])
     return element
