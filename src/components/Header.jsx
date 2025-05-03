@@ -35,6 +35,7 @@ const Header = () => {
   useEffect(() => {
     console.log(pathname);
     setOpenNavigation(false);
+    // enablePageScroll();
   } , [pathname]);
 
   return (

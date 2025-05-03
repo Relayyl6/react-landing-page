@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Section from './section'
 import curve from '../../assets/hero/curve.png'
 import Button from './Button'
+import useWindowResize from './curvewidth'
+import { heroBackground, robot } from '../../assets'
+// import { enablePageScroll } from 'scroll-lock'
 
 const Hero = () => {
+  // const {windowSize} = useWindowResize();
   return (
     <Section 
-      className="pt-[12rem] -mt-[5.25rem]"
+      className="pt-[8rem] -mt-[5.25rem] px-5 lg:px-8"
       crosses
       crossesOffset="lg:translate-y-[5.25rem]"
       customPadding
@@ -20,28 +24,54 @@ const Hero = () => {
                           lg:leading-[4.0625rem] xl:text-[3.75rem] 
                           xl:leading-[4.5rem] mb-6'>
               Explore the possibiities of AI Chatting with  
-              <span className='"inline-block relative'>
-                BrainWave{" "}
+              <span className='inline-block relative'>
+                 BrainWave
                 <img 
                   src={curve} 
-                  className='absolute top-full left-0 w-full xl:mt-2' 
-                  width={624}
+                  className='absolute top-full w-full xl:mt-2' 
+                  width={628}
                   height={28}
                   alt="curve"
                 />
               </span>
             </h1>
-            <p className="body-1 max-w-3xl mb-6 text-[#CAC6DD] lg:mb-8 mx-auto ">
+            <p className="body-1 max-w-3xl mb-6 text-[#CAC6DD] lg:mb-8 mx-auto">
               Unleash the potential of AI using Brainwave
               Double down on your productivity
               with Brainwave open AI chat app.
             </p>
             <Button
-              href="/pricing"
+              href="#pricing"
               white
               className="inline-flex">
                 Get started
             </Button>
+          </div>
+          <div className="max-w-md mx-auto md:max-w-5xl 
+          xl:mb-24 ">
+            <div className="relative p-0.5 z-1 rounded-2xl"
+                 style={{ backgroundImage: "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
+                 }}>
+              <div className="relative bg-[#0E0C15] rounded-[1rem]">
+                <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]"/>
+                <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden
+                                md:aspect-[688/490] lg:aspect-[1024/490]">
+                  <img 
+                    src={robot} 
+                    className="w-full"
+                    />
+                </div>
+              </div>
+            </div>
+            <div>
+              <img 
+                src={heroBackground}
+                className="w-full"
+                width={1400} 
+                height={1800}
+                alt="Hero"
+              />
+            </div>
           </div>
         </div>
     </Section>
