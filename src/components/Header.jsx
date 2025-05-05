@@ -1,6 +1,6 @@
 import { disablePageScroll, enablePageScroll } from '@fluejs/noscroll';
 import { Outlet, useLocation } from 'react-router-dom';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { brainwave } from '../../assets';
 import { navigation } from '../constants';
 import { useEffect } from 'react';
@@ -40,8 +40,8 @@ const Header = () => {
 
   return (
     <div className={`fixed top-0 left-0 w-full z-50
-    border-[#756d8f] lg:bg-[#0E0C15] 
-    lg:backdrop-blur-sm ${openNavigation ? 'bg-[#0E0C15]' : 'bg-[#0E0C15] opacity-90 backdrop-blur-sm'}`}>
+    border-[#756d8f] lg:bg-[#0E0C15] lg:backdrop-blur-sm 
+    ${openNavigation ? 'bg-[#0E0C15]' : 'bg-[#0E0C15] opacity-90 backdrop-blur-sm'}`}>
         <div className="flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
             <a className="block w-[12rem] xl:mr-8" href="#hero">
                 <img 

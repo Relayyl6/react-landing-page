@@ -3,9 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
 
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 :root {
   --font-sora: "Sora", sans-serif;
@@ -16,15 +13,6 @@
 
 * {
   scroll-behavior: smooth
-}
-
-.no-scrollbar {
-  scrollbar-width: none; /* For Firefox */
-  -ms-overflow-style: none; /* For Internet Explorer and Edge */
-}
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none; /* For Chrome, Safari, and Opera */
 }
 
 @layer base {
