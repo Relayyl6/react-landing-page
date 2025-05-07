@@ -1,24 +1,30 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import Section from './section'
 import curve from '../../assets/hero/curve.png'
 import Button from './Button'
 import useWindowResize from './curvewidth'
 import { heroBackground, robot } from '../../assets'
 // import { enablePageScroll } from 'scroll-lock'
+import { BackgroundCircles, BottomLine, Gradient } from '../design/Hero'
+import { heroIcons } from '../constants/index'
+import { ScrollParallax } from 'react-just-parallax' 
 
 const Hero = () => {
   // const {windowSize} = useWindowResize();
+  const parrallaxRef = useRef(null)
   return (
-    <Section 
-      className="pt-[8rem] -mt-[5.25rem] px-5 lg:px-8"
+    <Section
+      className="pt-[8rem] -mt-[5.25rem] px-4 lg:px-8"
       crosses
       crossesOffset="lg:translate-y-[5.25rem]"
       customPadding 
       id="hero"
         >
-        <div className='container relative'>
+        <div 
+            className='max-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[87.5rem] relative' 
+            ref={parrallaxRef}>
           <div className='relative z-1 max-w-[62rem] mx-auto
-                          text-center mb-auto md:mb-20 lg:mb-[6rem]'>
+                          text-center mb-auto md:mb-20 lg:mb-[5rem]'>
             <h1 className='font-semibold text-[2.5rem] leading-[3.25rem] 
                           md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] 
                           lg:leading-[4.0625rem] xl:text-[3.75rem] 
@@ -36,7 +42,7 @@ const Hero = () => {
               </span>
             </h1>
             <p className="body-1 lg:text-xl max-w-3xl mb-6 text-[#CAC6DD] lg:mb-8 mx-auto">
-              Unleash the potential of AI using Brainwave
+              Unleash the potential of AI using Brainwave.
               Double down on your productivity
               with Brainwave open AI chat app.
             </p>
@@ -59,11 +65,30 @@ const Hero = () => {
                   <img 
                     src={robot} 
                     className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] 
-                               md:-translate-y-[10%] lg:scale-[0.6] lg:-translate-y-[23%]"
+                               md:-translate-y-[10%] lg:-translate-y-[23%] mx-auto"
                     width={1024}
                     height={490}
                     alt="AI logo"
                     />
+                    <ScrollParallax isAbsolutelyPositioned>
+                      <ul className='hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1
+                      bg-[#474060]/40 backdrop-blur-xs border border-[#FFFFFF]/50 rounded-2xl xl:flex'>
+                        {
+                          heroIcons?.map((icon, index) => (
+                            <li 
+                              className='p-5' 
+                              key={index}>
+                                <img 
+                                  src={icon}
+                                  width={25}
+                                  height={25}
+                                  alt={icon}
+                                  />
+                            </li>
+                          ))
+                        }
+                      </ul>
+                    </ScrollParallax>
                 </div>
               </div>
             </div>
