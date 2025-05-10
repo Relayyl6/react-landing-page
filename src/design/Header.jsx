@@ -11,7 +11,7 @@ export const Rings = () => {
                             aspect-square border border-n-2/10 
                             rounded-full -translate-x-0.5 -translate-y-0.5">
                             </div>
-            <div className="absolute top-0.5 left-0.5 w-[23]
+            <div className="absolute top-0.5 right-0.5 w-[23]
                             aspect-square border border-n-2/10 
                             rounded-full -translate-x-0.5 -translate-y-0.5"></div>
 

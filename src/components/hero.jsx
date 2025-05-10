@@ -1,27 +1,28 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import Section from './section'
 import curve from '../../assets/hero/curve.png'
 import Button from './Button'
-import useWindowResize from './curvewidth'
+// import useWindowResize from './curvewidth'
 import { heroBackground, robot } from '../../assets'
 // import { enablePageScroll } from 'scroll-lock'
 import { BackgroundCircles, BottomLine, Gradient } from '../design/Hero'
 import { heroIcons } from '../constants/index'
 import { ScrollParallax } from 'react-just-parallax' 
+import { TypeAnimation } from 'react-type-animation'
 
 const Hero = () => {
   // const {windowSize} = useWindowResize();
   const parrallaxRef = useRef(null)
   return (
     <Section
-      className="pt-[8rem] -mt-[5.25rem] px-4 lg:px-8"
+      className="pt-[12rem] -mt-[4.55rem]"
       crosses
       crossesOffset="lg:translate-y-[5.25rem]"
       customPadding 
       id="hero"
         >
         <div 
-            className='max-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[87.5rem] relative' 
+            className='container relative' 
             ref={parrallaxRef}>
           <div className='relative z-1 max-w-[62rem] mx-auto
                           text-center mb-auto md:mb-20 lg:mb-[5rem]'>
@@ -29,7 +30,7 @@ const Hero = () => {
                           md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] 
                           lg:leading-[4.0625rem] xl:text-[3.75rem] 
                           xl:leading-[4.5rem] mb-6'>
-              Explore the possibiities of AI Chatting with BrainwaveCurve
+              Explore the possibilities of AI Chatting with {' '}
               <span className='inline-block relative'>
                  BrainWave
                 <img 
@@ -46,11 +47,21 @@ const Hero = () => {
               Double down on your productivity
               with Brainwave open AI chat app.
             </p>
+            
             <Button
               href="#pricing"
               white
               className="inline-flex">
-                Get started
+                <TypeAnimation
+                  sequence={[
+                    'Get Started', 2000,
+                    'What you waiting for?', 2000,
+                    'Click ME!', 2000,
+                  ]}
+                  wrapper='span'
+                  speed={30}
+                  repeat={Infinity}
+                />
             </Button>
           </div>
           <div className="max-w-md mx-auto md:max-w-5xl max-lg:mt-5
@@ -76,7 +87,7 @@ const Hero = () => {
                         {
                           heroIcons?.map((icon, index) => (
                             <li 
-                              className='p-5' 
+                              className='p-5 hover:opacity-50 transition-all ease-in-out' 
                               key={index}>
                                 <img 
                                   src={icon}
@@ -91,6 +102,9 @@ const Hero = () => {
                     </ScrollParallax>
                 </div>
               </div>
+
+              <Gradient />
+
             </div>
             <div className="absolute -top-[55%] left-[1/2] w-[234%] -translate-x-1/2 md:-top-[46%] lg:-top-[104%]">
               <img 
@@ -101,8 +115,14 @@ const Hero = () => {
                 alt="Hero"
               />
             </div>
+
+            <BackgroundCircles parrallaxRef={parrallaxRef}/>
+
           </div>
+
+          
         </div>
+
     </Section>
   )
 }
