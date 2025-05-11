@@ -1,7 +1,7 @@
 import { disablePageScroll, enablePageScroll } from '@fluejs/noscroll';
 import { Outlet, useLocation } from 'react-router-dom';
 import { useContext } from 'react';
-import { brainwave } from '../../assets';
+import { brainwave } from '../../assets'; 
 import { navigation } from '../constants';
 import { useEffect } from 'react';
 import Button from './Button';
