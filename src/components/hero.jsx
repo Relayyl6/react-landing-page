@@ -3,12 +3,15 @@ import Section from './section'
 import curve from '../../assets/hero/curve.png'
 import Button from './Button'
 // import useWindowResize from './curvewidth'
-import { heroBackground, robot } from '../../assets'
+import { heroBackground, notification4, robot } from '../../assets'
 // import { enablePageScroll } from 'scroll-lock'
 import { BackgroundCircles, BottomLine, Gradient } from '../design/Hero'
-import { heroIcons } from '../constants/index'
+import { heroIcons, notificationImages } from '../constants/index'
 import { ScrollParallax } from 'react-just-parallax' 
 import { TypeAnimation } from 'react-type-animation'
+import Generating from './AItext'
+import Notification from './Notification'
+import Drag from './floatingball'
 
 const Hero = () => {
   // const {windowSize} = useWindowResize();
@@ -21,6 +24,7 @@ const Hero = () => {
       customPadding 
       id="hero"
         >
+          {/* <Drag className="hidden z-1000 relative xl:flex"/> */}
         <div 
             className='container relative' 
             ref={parrallaxRef}>
@@ -30,7 +34,7 @@ const Hero = () => {
                           md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] 
                           lg:leading-[4.0625rem] xl:text-[3.75rem] 
                           xl:leading-[4.5rem] mb-6'>
-              Explore the possibilities of AI Chatting with {' '}
+              Explore the possibilities of&nbsp;AI&nbsp;Chatting with {' '}
               <span className='inline-block relative'>
                  BrainWave
                 <img 
@@ -71,6 +75,7 @@ const Hero = () => {
                  }}>
               <div className="relative bg-[#0E0C15] rounded-[1rem]">
                 <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]"/>
+                
                 <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden
                                 md:aspect-[688/490] lg:aspect-[1024/490]">
                   <img 
@@ -81,13 +86,19 @@ const Hero = () => {
                     height={490}
                     alt="AI logo"
                     />
+
+                    <Generating 
+                      className="absolute left-4 right-4 bottom-4 
+                                 md:left-1/2 md:right-auto md:bottom-8 
+                                 md:w-[31rem] md:-translate-x-1/2"/>
+
                     <ScrollParallax isAbsolutelyPositioned>
                       <ul className='hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1
                       bg-[#474060]/40 backdrop-blur-xs border border-[#FFFFFF]/50 rounded-2xl xl:flex'>
                         {
                           heroIcons?.map((icon, index) => (
                             <li 
-                              className='p-5 hover:opacity-50 transition-all ease-in-out' 
+                              className='p-5 hover:opacity-90 transition-all ease-in-out' 
                               key={index}>
                                 <img 
                                   src={icon}
@@ -99,6 +110,14 @@ const Hero = () => {
                           ))
                         }
                       </ul>
+                    </ScrollParallax>
+
+                    <ScrollParallax isAbsolutelyPositioned>
+                        <Notification 
+                          className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[20rem] xl:flex"
+                          title="Code generation"
+                          SampleImage={heroBackground}
+                          />
                     </ScrollParallax>
                 </div>
               </div>
@@ -122,7 +141,7 @@ const Hero = () => {
 
           
         </div>
-
+      <BottomLine/>                     
     </Section>
   )
 }
