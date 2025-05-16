@@ -6,12 +6,13 @@ import Button from './Button'
 import { heroBackground, notification4, robot } from '../../assets'
 // import { enablePageScroll } from 'scroll-lock'
 import { BackgroundCircles, BottomLine, Gradient } from '../design/Hero'
-import { heroIcons, notificationImages } from '../constants/index'
+import { heroIcons } from '../constants/index'
 import { ScrollParallax } from 'react-just-parallax' 
 import { TypeAnimation } from 'react-type-animation'
 import Generating from './AItext'
 import Notification from './Notification'
-import Drag from './floatingball'
+import CompanyLogos from './CompanyLogos'
+// import Drag from './floatingball' // floating ball motion
 
 const Hero = () => {
   // const {windowSize} = useWindowResize();
@@ -29,12 +30,12 @@ const Hero = () => {
             className='container relative' 
             ref={parrallaxRef}>
           <div className='relative z-1 max-w-[62rem] mx-auto
-                          text-center mb-auto md:mb-20 lg:mb-[5rem]'>
+                          text-center mb-auto md:mb-20'>
             <h1 className='font-semibold text-[2.5rem] leading-[3.25rem] 
                           md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] 
                           lg:leading-[4.0625rem] xl:text-[3.75rem] 
                           xl:leading-[4.5rem] mb-6'>
-              Explore the possibilities of&nbsp;AI&nbsp;Chatting with {' '}
+              Explore the possibilities of&nbsp;AI&nbsp;Interations with {' '}
               <span className='inline-block relative'>
                  BrainWave
                 <img 
@@ -98,7 +99,7 @@ const Hero = () => {
                         {
                           heroIcons?.map((icon, index) => (
                             <li 
-                              className='p-5 hover:opacity-90 transition-all ease-in-out' 
+                              className='p-5 hover:opacity-10 transition-all ease-in-out'
                               key={index}>
                                 <img 
                                   src={icon}
@@ -114,7 +115,7 @@ const Hero = () => {
 
                     <ScrollParallax isAbsolutelyPositioned>
                         <Notification 
-                          className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[20rem] xl:flex"
+                          className="hidden absolute backdrop-blur-xs -right-[5.5rem] bottom-[11rem] w-[20rem] xl:flex"
                           title="Code generation"
                           SampleImage={heroBackground}
                           />
@@ -139,9 +140,9 @@ const Hero = () => {
 
           </div>
 
-          
+          <CompanyLogos className="hidden relative z-10 mt-20 lg:block"/>
         </div>
-      <BottomLine/>                     
+      <BottomLine/>
     </Section>
   )
 }

@@ -40,19 +40,19 @@ const Header = () => {
 
   return (
     <div className={`fixed top-0 left-2 right-2 z-50 mt-2 rounded-2xl
-    border-[#756d8f] lg:bg-[#0E0C15] lg:backdrop-blur-2xl
-    ${openNavigation ? 'bg-[#0E0C15]' : 'bg-[#0E0C15] opacity-96 backdrop-blur-2xl'}`}>
+    border-[#756d8f] lg:bg-[#0E0C15] lg:backdrop-blur-xs
+    bg-[#0E0C15] opacity-100 backdrop-blur-xs'}`}>
         <div className={`flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4`}>
             <a className="block w-[12rem] xl:mr-8" href="#hero">
-                <img 
+                <img
                     src={brainwave} 
                     width={190} 
                     height={40} 
                     alt="Brainwave"
                   />
             </a>
-            <nav className={`${openNavigation ? 'flex' : 'hidden'} fixed top-[6rem] rounded-2xl left-2 right-2 bottom-[1rem] bg-[#0E0C15]                           
-            lg:static lg:flex lg:mx-auto lg: space-x-8 lg:bg-transparent`}>
+            <nav className={`${openNavigation ? 'flex' : 'hidden'} fixed top-[6rem] rounded-2xl left-2 right-2 bottom-[1rem] bg-[#0E0C15]
+            lg:static lg:flex lg:mx-auto lg:space-x-8 lg:bg-transparent`}>
                 <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
                     {
                       navigation?.map((item, index) => (

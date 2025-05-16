@@ -26,10 +26,11 @@ function Section({
                             pointer-events-none md:block h-full
                             lg:right-7.5 xl:right-10" />
 
+            {
                 crosses && (
                     <>
                         <div
-                            className={`hidden absolute top-0 left-7.5 right-7.5
+                            className={`hidden absolute top-0 left-20 right-7.5
                                     h-0.5 bg-[#26242C] ${crossesOffset && crossesOffset}
                                     pointer-events-none lg:block xl:left-10 xl:right-10`}
                         />

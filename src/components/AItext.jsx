@@ -1,10 +1,14 @@
 import React from 'react'
-import { loading } from '../../assets'
+// import { loading } from '../../assets'
 import { TypeAnimation } from 'react-type-animation'
 // import { motion, useTransform, useMotionValue } from 'framer-motion'
+import { RingLoader } from "react-spinners";
+import { useState } from 'react';
 
 
 const Generating = ({ className }) => {
+  const [loading, setLoading] = useState(true);
+  const [color, setColor] = useState("#ffffff");
 
   // const RotatingCircle = () => {
 
@@ -15,7 +19,7 @@ const Generating = ({ className }) => {
   // });
 
   //   return (
-  //     <motion.div 
+  //     <motion.div
   //       style={{
   //         width: '30px',
   //         height: '30px',
@@ -32,12 +36,19 @@ const Generating = ({ className }) => {
   // }
 
   return (
-    <div className={`flex items-center h-[3.5rem] px-6 bg-n-8/80 rounded-[1.7rem] ${className || ''} text-base`}>
-        <img 
+    <div className={`flex items-center h-[3.5rem] gap-x-2 px-6 bg-n-8/80 rounded-[1.7rem] ${className || ''} text-base`}>
+        {/* <img
             className='w-5 h-5 mr-5'
             src={loading}
             alt='loading'
-        />
+        /> */}
+          <RingLoader
+            color={color}
+            loading={loading}
+            size={45}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
         {/* <RotatingCircle/> */}
         <TypeAnimation
           sequence={[

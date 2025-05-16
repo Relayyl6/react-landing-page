@@ -1,9 +1,10 @@
 import React from 'react'
 import { notificationImages } from '../constants'
 import Gestures from './CodeGeneration'
+import { notification1 } from '../../assets'
 // import { notification1 } from '../../assets'
 
-const Notification = ({ SampleImage, className, title }) => {
+const Notification = ({ className, title }) => {
   return (
     <div 
         className={`rounded-2xl items-center 
@@ -15,22 +16,24 @@ const Notification = ({ SampleImage, className, title }) => {
                 width={90}
                 className='rounded-2xl aspect-square sm:m-0 sm:shrink-0'
             />     */}
-            <Gestures className='bg-[#9911ff] w-[90px] h-[90px] rounded-2xl aspect-square sm:m-0 sm:shrink-0' />
-        <div className='space-y-6'>
-            <h3 className='text-base mb-1 font-semibold'>{title}</h3>
-            <div className='mt-3'>  
-                <ul className='flex flex-row -space-x-2'>
+            <Gestures className='w-[65px] h-[65px] rounded-xl aspect-square sm:m-0 sm:shrink-0'>
+                <img src={notification1} className='rounded-xl'/>
+            </Gestures>
+        <div className='space-y-4 flex-1'>
+            <h5 className='text-base mb-1 font-semibold'>{title}</h5>
+            <div className='mt-3 flex'>  
+                <ul className='flex flex-row -m-0.5 -space-x-2'>
                     {
                         notificationImages?.map(
                             (item, index) => (
                                 <li 
                                     key={index}
-                                    className='flex w-10 h-10'>
+                                    className='flex w-6.5 h-6.5'>
                                     <img 
                                         src={item}
                                         className='w-full rounded-full ring-1 ring-transparent -space-x-2'
-                                        width={20}
-                                        height={20}
+                                        width={15}
+                                        height={15}
                                         alt='item'
                                     />
                                 </li>
@@ -38,8 +41,12 @@ const Notification = ({ SampleImage, className, title }) => {
                         )
                     }
                 </ul>
+                <div className='relative -right-13 body-2 text-n-13'>
+                    1m ago
+                </div>
             </div>
         </div> 
+        
     </div>
   )
 }
