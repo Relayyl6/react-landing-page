@@ -10,7 +10,7 @@ const CompanyLogos = ({ className }) => {
             (companylogo, index) => (
               <li
                 key={index}
-                className="flex item-cener justify-center flex-1 h-[8rem]">
+                className="flex items-center justify-center flex-1 h-[8rem]">
                   <img
                     src={companylogo}
                     width={134}

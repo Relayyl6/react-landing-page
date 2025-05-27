@@ -3,6 +3,7 @@ import ButtonGradient from '../assets/svg/ButtonGradient';
 import Header from './components/Header';
 import NotfoundPage from './pages/Not-Found';
 import Hero from './components/hero';
+import Benefit from './components/benefit';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
             <>
               <Header/>
               <Hero/>
+              <Benefit/>
             </>
         ),
       },
@@ -30,11 +32,11 @@ function App() {
 
 
     <>
-      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
+      <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden custom-scrollbar">
         <ParentNav/>
       </div>
 
-      {/* <ButtonGradient/> */}
+      <ButtonGradient/>
     </>
   )
 }

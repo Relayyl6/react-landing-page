@@ -39,11 +39,11 @@ react-landing/
 │   ├── main.jsx         # Entry point for the React app
 │   └── index.css        # Tailwind CSS and global styles
 ├── public/              # Public assets
-├── [tailwind.config.js](http://_vscodecontentref_/1)   # Tailwind CSS configuration
-├── [vite.config.js](http://_vscodecontentref_/2)       # Vite configuration
-├── [package.json](http://_vscodecontentref_/3)         # Project dependencies and scripts
-└── [README.md](http://_vscodecontentref_/4)            # Project documentation
-
+├── [tailwind.config.js]   # Tailwind CSS configuration
+├── [vite.config.js]       # Vite configuration
+├── [package.json]        # Project dependencies and scripts
+└── [README.md]         # Project documentation
+``` 
 ---
 
 ## ⚙️Setup and Installation

@@ -21,7 +21,7 @@ const Notification = ({ className, title }) => {
             </Gestures>
         <div className='space-y-4 flex-1'>
             <h5 className='text-base mb-1 font-semibold'>{title}</h5>
-            <div className='mt-3 flex'>  
+            <div className='mt-3 flex'>
                 <ul className='flex flex-row -m-0.5 -space-x-2'>
                     {
                         notificationImages?.map(

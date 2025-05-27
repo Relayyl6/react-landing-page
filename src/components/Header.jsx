@@ -40,7 +40,7 @@ const Header = () => {
 
   return (
     <div className={`fixed top-0 left-2 right-2 z-50 mt-2 rounded-2xl
-    border-[#756d8f] lg:bg-[#0E0C15] lg:backdrop-blur-xs
+    border-[#756d8f] lg:bg-[#0E0C15] lg:max-w-11/12 mx-auto lg:backdrop-blur-xs
     bg-[#0E0C15] opacity-100 backdrop-blur-xs'}`}>
         <div className={`flex items-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4`}>
             <a className="block w-[12rem] xl:mr-8" href="#hero">
@@ -74,12 +74,12 @@ const Header = () => {
             </nav>
             <a 
               href="#signup" 
-              className="button hidden mr-8 text-n-1/50 
+              className="button hidden mr-4 md:mr-8 text-n-1/50 
                          transition-colors hover:text-n-1 
                          lg:block uppercase">
               New Account
             </a>
-            <Button className="hidden lg:flex uppercase"  href="#login">
+            <Button className="hidden lg:flex uppercase" href="#login">
                 Sign In
             </Button>
             <Button className="ml-auto lg:hidden" px="px-3" onClick={toggleNavigation}>

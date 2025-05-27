@@ -5,14 +5,14 @@ function Section({
     id,
     crosses,
     crossesOffset,
-    customPadding, 
+    customPadding,
     children
 }) {
     
     return (
         <div 
             id={id}
-            className={`relative 
+            className={`relative
                         ${customPadding ||
                         `py-10 lg:py-16 xl:py-20 
                         ${crosses ? "lg:py-32 xl:py-40" : ""}`} 
@@ -30,7 +30,7 @@ function Section({
                 crosses && (
                     <>
                         <div
-                            className={`hidden absolute top-0 left-20 right-7.5
+                            className={`hidden absolute top-0 left-7.5 right-7.5
                                     h-0.5 bg-[#26242C] ${crossesOffset && crossesOffset}
                                     pointer-events-none lg:block xl:left-10 xl:right-10`}
                         />
