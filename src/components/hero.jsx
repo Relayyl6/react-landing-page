@@ -114,7 +114,7 @@ const Hero = () => {
                     </ScrollParallax>
 
                     <ScrollParallax isAbsolutelyPositioned>
-                        <Notification 
+                        <Notification
                           className="hidden absolute backdrop-blur-xs -right-[5.5rem] bottom-[11rem] w-[20rem] xl:flex"
                           title="Code generation"
                           SampleImage={heroBackground}
@@ -126,11 +126,11 @@ const Hero = () => {
               <Gradient />
 
             </div>
-            <div className="absolute -top-[55%] left-[1/2] w-[234%] -translate-x-1/2 md:-top-[46%] lg:-top-[104%]">
-              <img 
+            <div className="absolute -top-[50%] left-[1/2] w-[234%] -translate-x-1/2 md:-top-[46%] lg:-top-[150%]">
+              <img
                 src={heroBackground}
                 className="w-full"
-                width={1400} 
+                width={1400}
                 height={1800}
                 alt="Hero"
               />
