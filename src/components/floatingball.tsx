@@ -44,7 +44,5 @@ export function useFollowPointer(ref: RefObject<HTMLDivElement | null>) {
     return { x, y }
 }
 
-/**
- * ==============   Styles   ================
- */
+
 

@@ -4,6 +4,7 @@ import Gestures from './CodeGeneration'
 import { notification1 } from '../../assets'
 // import { notification1 } from '../../assets'
 
+
 const Notification = ({ className, title }) => {
   return (
     <div 
@@ -22,31 +23,32 @@ const Notification = ({ className, title }) => {
         <div className='space-y-4 flex-1'>
             <h5 className='text-base mb-1 font-semibold'>{title}</h5>
             <div className='mt-3 flex'>
-                <ul className='flex flex-row -m-0.5 -space-x-2'>
+                <ul className='flex flex-row -m-0.5 -space-x-2 hover:space-x-0.5 focus:scale-95 transition duration-900 flex-wrap '>
                     {
                         notificationImages?.map(
                             (item, index) => (
                                 <li 
                                     key={index}
                                     className='flex w-6.5 h-6.5'>
-                                    <img 
+                                    <Gestures tap>
+                                        <img
                                         src={item}
                                         className='w-full rounded-full ring-1 ring-transparent -space-x-2'
                                         width={15}
                                         height={15}
                                         alt='item'
-                                    />
+                                        />
+                                    </Gestures>
                                 </li>
                             )
                         )
                     }
                 </ul>
-                <div className='relative -right-13 body-2 text-n-13'>
+                <div className='absolute -right-1 left-55 body-2 text-n-13'>
                     1m ago
                 </div>
             </div>
-        </div> 
-        
+        </div>
     </div>
   )
 }

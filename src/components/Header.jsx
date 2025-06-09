@@ -33,7 +33,7 @@ const Header = () => {
   }
 
   useEffect(() => {
-    console.log(pathname);
+    // console.log(pathname);
     setOpenNavigation(false);
     // enablePageScroll();
   } , [pathname]);
@@ -65,7 +65,7 @@ const Header = () => {
                                        transition-all duration-300 ease-in-out hover:scale-120 not-hover:transition-none
                                        ${item.url === pathname.hash ? 'z-2 lg:text-indigo-600 lg:text-2xl' : 'lg:text-amber-50'} 
                                        lg:leading-5 lg:hover:text-n-[#FFFFFF]`}>
-                          {item.title}   
+                          {item.title}
                         </a>
                       ))
                     }
