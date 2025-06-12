@@ -1,7 +1,8 @@
 import React from 'react'
 import Section from './section'
-import { collabContent } from '../constants'
+import { collabContent, collabText } from '../constants'
 import { check } from '../../assets'
+import Button from './Button'
 
 const Colllaboration = () => {
   return (
@@ -38,6 +39,21 @@ const Colllaboration = () => {
               ))
             }
           </ul>
+        
+        <Button>
+          Try it now
+        </Button>
+        </div>
+        
+        <div className='lg:ml-auto xl:w-[38rem]'>
+            <p className='body-2 mb-4 mt-4 text-n-4 md:mb-16 lg:mb-32 lg:w-[22rem] lg:mx-auto'>
+              {collabText}
+            </p>
+
+            <div className='relative left-1/2 flex w-[22rem] aspect-square border
+            border-n-6 rounded-full -translate-x-1/2 scale-75 md:scale-100'>
+
+            </div>
         </div>
       </div>
     </Section>
