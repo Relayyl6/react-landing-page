@@ -62,7 +62,7 @@ export const HamburgerMenu = () => {
 
             <Rings/>
             <SideLines/>
-            <BackgroundCircles/>                  
+            <BackgroundCircles/>
         </div>
     )
 }

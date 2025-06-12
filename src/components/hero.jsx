@@ -81,7 +81,7 @@ const Hero = () => {
                                 md:aspect-[688/490] lg:aspect-[1024/490]">
                   <img 
                     src={robot} 
-                    className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] 
+                    className="w-full scale-[1.7] translate-y-[8%] md:scale-[1]
                                md:-translate-y-[10%] lg:-translate-y-[23%] mx-auto"
                     width={1024}
                     height={490}
@@ -126,7 +126,7 @@ const Hero = () => {
               <Gradient />
 
             </div>
-            <div className="absolute -top-[50%] left-[1/2] w-[234%] -translate-x-1/2 md:-top-[46%] lg:-top-[150%]">
+            <div className="absolute left-[1/2] w-[234%] -translate-x-1/2 -top-[50%] md:-top-[40%] lg:-top-[18%]">
               <img
                 src={heroBackground}
                 className="w-full"

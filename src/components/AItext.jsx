@@ -7,8 +7,8 @@ import { useState } from 'react';
 
 
 const Generating = ({ className }) => {
-  const [loading, setLoading] = useState(true);
-  const [color, setColor] = useState("#ffffff");
+  const [loading, _setLoading] = useState(true);
+  const [color, _setColor] = useState("#ffffff");
 
   // const RotatingCircle = () => {
 
@@ -45,7 +45,7 @@ const Generating = ({ className }) => {
           <RingLoader
             color={color}
             loading={loading}
-            size={45}
+            size={30}
             aria-label="Loading Spinner"
             data-testid="loader"
           />

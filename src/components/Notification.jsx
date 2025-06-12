@@ -8,10 +8,10 @@ import { notification1 } from '../../assets'
 const Notification = ({ className, title }) => {
   return (
     <div 
-        className={`rounded-2xl items-center 
-        md:items-left bg-n-8/70 p-4 pr-6 backdrop-blur-sm 
+        className={`rounded-2xl items-center
+        md:items-left bg-n-8/70 p-4 pr-6 backdrop-blur-sm
         ${className || ''} border border-n-1/10 gap-5`}>
-            {/* <img    
+            {/* <img
                 src={SampleImage}
                 height={90}
                 width={90}
@@ -23,7 +23,7 @@ const Notification = ({ className, title }) => {
         <div className='space-y-4 flex-1'>
             <h5 className='text-base mb-1 font-semibold'>{title}</h5>
             <div className='mt-3 flex'>
-                <ul className='flex flex-row -m-0.5 -space-x-2 hover:space-x-0.5 focus:scale-95 transition duration-900 flex-wrap '>
+                <ul className='flex flex-row -m-0.5 -space-x-2 hover:space-x-0.5 transition-space duration-500 flex-wrap '>
                     {
                         notificationImages?.map(
                             (item, index) => (

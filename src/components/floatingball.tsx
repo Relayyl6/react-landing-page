@@ -6,17 +6,17 @@ export default function Drag({ className}) {
     const ref = useRef<HTMLDivElement>(null)
     const { x, y } = useFollowPointer(ref)
 
-    return <motion.div 
-                ref={ref} 
+    return <motion.div
+                ref={ref}
                 className={`w-[20px] h-[20px] bg-[#ff0088] border rounded-full shadow-lg ${className || ''}`}
                 drag
                 style={{ x, y }} />
 }
 
-const spring = { 
-    damping: 3, 
-    stiffness: 20, 
-    restDelta: 0.001 
+const spring = {
+    damping: 3,
+    stiffness: 20,
+    restDelta: 0.001
 }
 
 export function useFollowPointer(ref: RefObject<HTMLDivElement | null>) {

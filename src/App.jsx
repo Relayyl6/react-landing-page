@@ -4,23 +4,25 @@ import Header from './components/Header';
 import NotfoundPage from './pages/Not-Found';
 import Hero from './components/hero';
 import Benefit from './components/benefit';
+import Colllaboration from './components/Colllaboration';
 
 function App() {
 
   const ParentNav = () => {
     const element = useRoutes([
       {
-        path : '/', 
+        path : '/',
         element : (
             <>
               <Header/>
               <Hero/>
               <Benefit/>
+              <Colllaboration/>
             </>
         ),
       },
       {
-        path : '*', 
+        path : '*',
         element : <NotfoundPage/>
       }
     ])
