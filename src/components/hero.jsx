@@ -126,13 +126,19 @@ const Hero = () => {
               <Gradient />
 
             </div>
-            <div
-              className="absolute left-[1/2] w-[234%] -translate-x-1/2 mr-auto scale-200 -top-[10%] md:-top-[12%] lg:-top-[18%]"
-              style={{
-                backgroundImage : `url(${heroBackground})`,
-                backgroundRepeat : "repeat-y",
-                backgroundSize : "cover",
-              }}>
+            <div 
+              className="absolute left-[1/2] w-[234%] -translate-x-1/2 scale-200 -top-[1px]"
+              >
+              <img
+                src={heroBackground}
+                className="w-full"
+                width={1400}
+                height={1800}
+                alt="Hero"
+              />
+              
+
+              
             </div>
 
             <BackgroundCircles parrallaxRef={parrallaxRef}/>
