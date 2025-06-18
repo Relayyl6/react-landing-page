@@ -53,7 +53,7 @@ const Generating = ({ className }) => {
         <TypeAnimation
           sequence={[
             'AI is generating', 2000,
-            'Comparing generative prompts', 2000,
+            'Loading generative prompts', 2000,
             'Parsing Image file', 2000,
             ]}
           wrapper='span'

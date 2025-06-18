@@ -15,7 +15,7 @@ const Benefit = () => {
   // }
 
   return (
-    <Section id="features">
+    <Section id="features" crosses>
       <div className="container relative z-2">
         <Heading
           className="md:max-w-md lg:max-w-3xl text-center rounded-lg bg-n-7 px-3 background-blur-lg"

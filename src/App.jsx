@@ -5,6 +5,7 @@ import NotfoundPage from './pages/Not-Found';
 import Hero from './components/hero';
 import Benefit from './components/benefit';
 import Colllaboration from './components/Colllaboration';
+import Services from './components/Services';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
               <Hero/>
               <Benefit/>
               <Colllaboration/>
+              <Services/>
             </>
         ),
       },
@@ -31,8 +33,6 @@ function App() {
 
 
   return (
-
-
     <>
       <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden custom-scrollbar">
         <ParentNav/>
