@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
-import Section from './section'
+import Section from '../components/section.jsx'
 import curve from '../../assets/hero/curve.png'
-import Button from './Button'
+import Button from '../components/Button.jsx'
 // import useWindowResize from './curvewidth'
 import { heroBackground, notification4, robot } from '../../assets'
 // import { enablePageScroll } from 'scroll-lock'
@@ -9,9 +9,9 @@ import { BackgroundCircles, BottomLine, Gradient } from '../design/Hero'
 import { heroIcons } from '../constants/index'
 import { ScrollParallax } from 'react-just-parallax' 
 import { TypeAnimation } from 'react-type-animation'
-import Generating from './AItext'
-import Notification from './Notification'
-import CompanyLogos from './CompanyLogos'
+import Generating from '../components/AItext'
+import Notification from '../components/Notification'
+import CompanyLogos from '../components/CompanyLogos'
 // import Drag from './floatingball' // floating ball motion
 
 const Hero = () => {

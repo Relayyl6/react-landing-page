@@ -4,7 +4,7 @@ import { useContext } from 'react';
 import { brainwave } from '../../assets'; 
 import { navigation } from '../constants';
 import { useEffect } from 'react';
-import Button from './Button';
+import Button from '../components/Button.jsx';
 import MenuSvg from '../../assets/svg/MenuSvg';
 import { HamburgerMenu } from '../design/Header';
 import { GlobalContext } from '../context/context';

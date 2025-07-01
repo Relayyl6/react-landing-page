@@ -1,11 +1,12 @@
 import { useRoutes } from 'react-router-dom';
 import ButtonGradient from '../assets/svg/ButtonGradient';
-import Header from './components/Header';
+import Header from './sections/Header';
 import NotfoundPage from './pages/Not-Found';
-import Hero from './components/hero';
-import Benefit from './components/benefit';
-import Colllaboration from './components/Colllaboration';
-import Services from './components/Services';
+import Hero from './sections/hero';
+import Benefit from './sections/benefit';
+import Colllaboration from './sections/Colllaboration';
+import Services from './sections/Services';
+import Pricing from './sections/Pricing';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
               <Benefit/>
               <Colllaboration/>
               <Services/>
+              <Pricing/>
             </>
         ),
       },

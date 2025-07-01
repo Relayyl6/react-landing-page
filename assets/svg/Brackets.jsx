@@ -1,4 +1,4 @@
-const brackets = (position) =>
+const Brackets = (position) =>
   position === "left" ? (
     <svg
       width="5"
@@ -20,7 +20,7 @@ const brackets = (position) =>
       width="5"
       height="14"
       viewBox="0 0 5 14"
-      fill="none"
+      fill="none"s
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -42,4 +42,4 @@ const brackets = (position) =>
     </svg>
   );
 
-export default brackets;
+export default Brackets;
