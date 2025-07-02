@@ -27,7 +27,7 @@ const Services = () => {
                             alt="Smartest AI"
                             />
                     </div>
-                    <div className='relative z-1 max-w-[17rem] ml-auto'>
+                    <div className='relative z-1 max-w-[18.5rem] p-2 border-6 rounded-2xl border-n-7 ml-auto'>
                         <h4 className='h4 mb-4'>
                             Smartest AI
                         </h4>
@@ -40,7 +40,7 @@ const Services = () => {
                                     (services, index) => (
                                         <li
                                             key={index}
-                                            className='flex items-start py-4 border border-t border-n-6'
+                                            className='flex items-start py-4 border first:rounded-t-xl last:rounded-b-xl border-t border-n-6'
                                             >
                                             <img 
                                                 src={check}
@@ -71,7 +71,7 @@ const Services = () => {
                                 />
                         </div>
                         <div className='absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90'>
-                            <h4 className='h4 mb-4 ml-auto'>
+                            <h4 className='h4 mb-4'>
                                 Photo Editing
                             </h4>
                             <p className='body-2 mb-[3rem]'>
@@ -83,13 +83,13 @@ const Services = () => {
 
                     <div className='relative p-4 bg-n-7 overflow-hidden rounded-3xl lg:min-h-[46rem]'>
                         <div className='py-12 px-4 xl:px-8'>
-                            <h4 className='h4 mb-4 ml-auto'>Video generation</h4>
+                            <h4 className='h4 mb-4'>Video generation</h4>
                             <p className='body-2 mb-[2rem] text-n-3'>The world's most powerful AI hoto and Video art generation engine. What will you crete with it?</p>
                             <ul className='flex items-center justify-between'>
                                 {
                                     brainwaveServicesIcons.map((icon, index) => (
-                                        <li key={index} className={`flex items-center justify-center rounded-2xl ${index === 2 ? 'w-[3rem] h-[3rem] p-0.25 bg-conic-gradient md:w-[4.5rem] md:h-[4.5rem]' : 'flex w-10 h-10 bg-n-6 md:w-15 md:h-15'}`}>
-                                            <div className={`${index === 2 ? 'flex items-center justify-center w-full h-full bg-n-7 rounded-[1rem]' : ''}`}>
+                                        <li key={index} className={`flex items-center justify-center rounded-2xl transition-all duration-300 hover:scale-110 hover:p-0.25 hover:bg-conic-gradient w-10 h-10 bg-n-6 md:w-15 md:h-15`}>
+                                            <div className={`hover:flex hover:items-center hover:justify-center hover:w-full hover:h-full hover:bg-n-7 hover:rounded-[1rem]`}>
                                                 <img
                                                     src={icon}
                                                     width={24}

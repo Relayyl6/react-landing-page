@@ -7,6 +7,7 @@ import Benefit from './sections/benefit';
 import Colllaboration from './sections/Colllaboration';
 import Services from './sections/Services';
 import Pricing from './sections/Pricing';
+import Roadmap from './sections/Roadmap'
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
               <Colllaboration/>
               <Services/>
               <Pricing/>
+              <Roadmap/>
             </>
         ),
       },

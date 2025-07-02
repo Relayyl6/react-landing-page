@@ -8,7 +8,7 @@ function Button({ className, href, onClick, children, px, white }) {
     ${white ? 'text-[#0E0C15]' : 'text-[#FFFFFF]'}`;
 
     const spanClasses = `relative z-10`
-
+    
     const buttonElement = () => (
             <button className={classes} onClick={onClick}>
                 <span className={spanClasses}>{children}</span>
