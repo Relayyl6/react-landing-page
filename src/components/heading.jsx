@@ -4,7 +4,7 @@ import Tagline from './Tagline'
 const Heading = ({ className, title, text, tag }) => {
   return (
     <div
-      className={`${className || ''} max-w-[50rem] mx-auto mb-12 lg:mb-20`}>
+      className={`${className || ''} max-w-[50rem] mx-auto mb-12 lg:mb-20 text-center`}>
         {
           title && <h2 className='h2 md:text-center'>
             {title}
@@ -16,7 +16,7 @@ const Heading = ({ className, title, text, tag }) => {
           </p>
         }
         {
-          tag && <Tagline className='mb-4 md:justify-center'>
+          tag && <Tagline className='mb-4 flex justify-center '>
             {tag}
           </Tagline>
         }
