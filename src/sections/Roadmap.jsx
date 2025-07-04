@@ -1,6 +1,9 @@
 import React from 'react'
 import Section from '../components/section'
 import Heading from '../components/heading'
+import { roadmap } from '../constants'
+import { check2, grid, loading1 } from '../../assets'
+import Tagline from '../components/Tagline'
 
 const Roadmap = () => {
   return (
@@ -10,6 +13,63 @@ const Roadmap = () => {
                 tag="Ready to get started"
                 title="What we're working on"
             />
+
+            <div className='relative grid gap-6 md:grid-cols-2 md:gap-4 md:pb-[7rem]'>
+              {
+                roadmap.map(
+                  (item, index) => {
+                    const status = item.status === 'done' ? "Done" : "In progress";
+
+                    return (
+                      <div key={item.id || index}>
+                        <div>
+                          <div>
+                            <img
+                              src={grid}
+                              className='w-full'
+                              width={550}
+                              height={550}
+                              alt='Grid'
+                            />
+                          </div>
+                          <div className='relative z-1'>
+                            <div className='flex items-center justify-between'>
+                              <Tagline>
+                                {item.date}
+                              </Tagline>
+
+                              <div>
+                                <img
+                                  src={item.status === "done" ? check2 : loading1}
+                                  className='mr-2.5'
+                                  width={16}
+                                  height={16}
+                                  alt='status'
+                                />
+                                <div className='tagline'>
+                                  {status}
+                                </div>
+                              </div>
+                              <div className='mb-10'>
+                                <img
+                                  src={item.imageUrl}
+                                  className='w-full'
+                                  width={630}
+                                  height={420}
+                                />
+                              </div>
+                              <h4 className='h4 mb-4'>{item.title}</h4>
+                              <p className='body-2 text-n-4'>{item.text}</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )
+                    
+                  }
+                )
+              }
+            </div>
         </div>
     </Section>
   )

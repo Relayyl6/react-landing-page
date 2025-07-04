@@ -7,7 +7,7 @@ import { notification1 } from '../../assets'
 
 const Notification = ({ className, title }) => {
   return (
-    <div 
+    <div
         className={`rounded-2xl items-center
         md:items-left bg-n-8/70 p-4 pr-6 backdrop-blur-sm
         ${className || ''} border border-n-1/10 gap-5`}>

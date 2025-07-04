@@ -36,7 +36,7 @@ const Generating = ({ className }) => {
   // }
 
   return (
-    <div className={`flex items-center h-[3.5rem] gap-x-2 px-6 bg-n-8/80 rounded-[1.7rem] ${className || ''} text-base mr-6`}>
+    <div className={`flex items-center h-[3.5rem] gap-x-2 px-6 bg-n-8/80 rounded-[1.7rem] ${className || ''} text-base`}>
         {/* <img
             className='w-5 h-5 mr-5'
             src={loading}
