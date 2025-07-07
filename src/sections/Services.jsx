@@ -27,7 +27,7 @@ const Services = () => {
                             alt="Smartest AI"
                             />
                     </div>
-                    <div className='relative z-1 max-w-[18.5rem] p-2 border-6 rounded-2xl border-n-7 ml-auto'>
+                    <div className='relative z-1 md:max-w-[18.5rem] max-w-[15rem] p-2 border-6 rounded-2xl border-n-7 ml-auto'>
                         <h4 className='h4 mb-4'>
                             Smartest AI
                         </h4>
@@ -42,12 +42,13 @@ const Services = () => {
                                             key={index}
                                             className='flex items-start py-4 border first:rounded-t-xl last:rounded-b-xl border-t border-n-6'
                                             >
-                                            <img 
+                                            <img
                                                 src={check}
                                                 width={24}
                                                 height={24}
+                                                className='ml-3'
                                                 />
-                                            <p className='ml-4'>{services}</p>
+                                            <p className='ml-3'>{services}</p>
                                         </li>
                                     )
                                 )
@@ -84,7 +85,7 @@ const Services = () => {
                     <div className='relative p-4 bg-n-7 overflow-hidden rounded-3xl lg:min-h-[46rem]'>
                         <div className='py-12 px-4 xl:px-8'>
                             <h4 className='h4 mb-4'>Video generation</h4>
-                            <p className='body-2 mb-[2rem] text-n-3'>The world's most powerful AI hoto and Video art generation engine. What will you crete with it?</p>
+                            <p className='body-2 mb-[2rem] text-n-3'>The world's most powerful AI photo and Video art generation engine. What will you crete with it?</p>
                             <ul className='flex items-center justify-between'>
                                 {
                                     brainwaveServicesIcons.map((icon, index) => (

@@ -23,11 +23,11 @@ const Notification = ({ className, title }) => {
         <div className='space-y-4 flex-1'>
             <h5 className='text-base mb-1 font-semibold'>{title}</h5>
             <div className='mt-3 flex'>
-                <ul className='flex flex-row -m-0.5 -space-x-2 hover:space-x-0.5 transition-space duration-500 flex-wrap '>
+                <ul className='flex flex-row -m-0.5 -space-x-2 hover:space-x-0.5 transition-space duration-500 flex-wrap'>
                     {
                         notificationImages?.map(
                             (item, index) => (
-                                <li 
+                                <li
                                     key={index}
                                     className='flex w-6.5 h-6.5'>
                                     <Gestures tap>
@@ -44,8 +44,8 @@ const Notification = ({ className, title }) => {
                         )
                     }
                 </ul>
-                <div className='absolute -right-1 left-55 body-2 text-n-13'>
-                    1m ago
+                <div className='absolute right-13 body-2 text-n-13'>
+                    {new Date().getMinutes()}m ago
                 </div>
             </div>
         </div>

@@ -3,9 +3,9 @@ import Section from '../components/section.jsx'
 import curve from '../../assets/hero/curve.png'
 import Button from '../components/Button.jsx'
 // import useWindowResize from './curvewidth'
-import { heroBackground, notification4, robot } from '../../assets'
+import { heroBackground, robot } from '../../assets'
 // import { enablePageScroll } from 'scroll-lock'
-import { BackgroundCircles, BottomLine, Gradient } from '../design/Hero'
+import { BackgroundCircles, Gradient } from '../design/Hero'
 import { heroIcons } from '../constants/index'
 import { ScrollParallax } from 'react-just-parallax' 
 import { TypeAnimation } from 'react-type-animation'
@@ -23,8 +23,7 @@ const Hero = () => {
       crosses
       crossesOffset="lg:translate-y-[5.25rem]"
       customPadding 
-      id="hero"
-        >
+      id="hero">
           {/* <Drag className="hidden z-1000 relative xl:flex"/> */}
         <div 
             className='container relative' 
@@ -52,7 +51,6 @@ const Hero = () => {
               Double down on your productivity
               with Brainwave open AI chat app.
             </p>
-            
             <Button
               href="#pricing"
               white
@@ -71,37 +69,34 @@ const Hero = () => {
           </div>
           <div className="max-w-md mx-auto md:max-w-5xl max-lg:mt-5
           xl:mb-24">
-            <div className="relative p-0.5 z-1 rounded-2xl"
-                 style={{ backgroundImage: "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
-                 }}>
-              <div className="relative bg-[#0E0C15] rounded-[1rem]">
+            <div className="relative p-0.5 z-1">
+              <div className="relative bg-[#0E0C15] rounded-[1.3rem]">
                 <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]"/>
-                
                 <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden
                                 md:aspect-[688/490] lg:aspect-[1024/490]">
-                  <img 
-                    src={robot} 
+                  <img
+                    src={robot}
                     className="w-full scale-[1.7] translate-y-[8%] md:scale-[1]
-                               md:-translate-y-[10%] lg:-translate-y-[23%] mx-auto"
+                                md:-translate-y-[10%] lg:-translate-y-[23%] mx-auto"
                     width={1024}
                     height={490}
                     alt="AI logo"
                     />
 
-                    <Generating 
-                      className="absolute left-4 right-4 bottom-4 
-                                 md:left-1/2 md:right-auto md:bottom-8 
-                                 md:w-[31rem] md:-translate-x-1/2"/>
+                    <Generating
+                      className="absolute left-4 right-4 bottom-4
+                                  md:left-1/2 md:right-auto md:bottom-8
+                                  md:w-[31rem] md:-translate-x-1/2"/>
 
                     <ScrollParallax isAbsolutelyPositioned>
                       <ul className='hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1
                       bg-[#474060]/40 backdrop-blur-xs border border-[#FFFFFF]/50 rounded-2xl xl:flex'>
                         {
                           heroIcons?.map((icon, index) => (
-                            <li 
-                              className='p-5 hover:opacity-10 transition-all ease-in-out'
+                            <li
+                              className='p-5 hover:opacity-10 transition-all ease-in-out duration-300 z-10'
                               key={index}>
-                                <img 
+                                <img
                                   src={icon}
                                   width={25}
                                   height={25}
@@ -126,7 +121,7 @@ const Hero = () => {
               <Gradient />
 
             </div>
-            <div 
+            <div
               className="absolute left-[1/2] w-[234%] -translate-x-1/2 scale-200 -top-[1px]"
               >
               <img
@@ -136,18 +131,13 @@ const Hero = () => {
                 height={1800}
                 alt="Hero"
               />
-              
-
-              
             </div>
-
             <BackgroundCircles parrallaxRef={parrallaxRef}/>
-
           </div>
 
           <CompanyLogos className="hidden relative z-10 mt-20 lg:block"/>
         </div>
-      <BottomLine/>
+      {/* <BottomLine/> */}
     </Section>
   )
 }

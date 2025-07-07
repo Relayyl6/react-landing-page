@@ -11,7 +11,12 @@ const Footer = () => {
                 {
                     socials.map(
                         (item, index) => (
-                            <a href={item.url} key={index || item.id} target="_blank" className='flex items-center justify-center w-10 h-10 bg-n-7 rounded-full transition-colors hover:bg-n-6'>
+                            <a
+                                href={item.url}
+                                key={index || item.id}
+                                target="_blank"
+                                className='flex items-center justify-center w-10 h-10 bg-n-7
+                                            rounded-full transition-colors hover:bg-n-6'>
                                 <img
                                     src={item.iconUrl}
                                     width={16}
